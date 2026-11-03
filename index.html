@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="pastel">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tic Tac Toe vs AI</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+
+  <section id="start" class="screen">
+    <div class="logo" aria-hidden="true">
+      <span class="x">X</span><span class="o">O</span><span class="x">X</span>
+      <span></span><span class="x">X</span><span class="o">O</span>
+      <span class="o">O</span><span></span><span class="x">X</span>
+    </div>
+    <h1>Tic Tac Toe</h1>
+    <p class="sub">Can you outsmart the AI?</p>
+
+    <div class="group">
+      <span>Mode</span>
+      <div class="pills" id="modes">
+        <button class="pill on" data-mode="ai">vs AI</button>
+        <button class="pill" data-mode="two">2 Players</button>
+      </div>
+    </div>
+
+    <div class="group" id="levelGroup">
+      <span>Level</span>
+      <div class="pills" id="levels">
+        <button class="pill" data-level="easy">Easy</button>
+        <button class="pill" data-level="medium">Medium</button>
+        <button class="pill on" data-level="hard">Hard</button>
+      </div>
+    </div>
+
+    <div class="group" id="sideGroup">
+      <span>You play as</span>
+      <div class="pills" id="sides">
+        <button class="pill on" data-side="X">X (first)</button>
+        <button class="pill" data-side="O">O (second)</button>
+      </div>
+    </div>
+
+    <div class="group">
+      <span>Theme</span>
+      <div class="pills" id="themes">
+        <button class="pill on" data-skin="pastel">Pastel</button>
+        <button class="pill" data-skin="dark">Dark</button>
+        <button class="pill" data-skin="neon">Neon</button>
+      </div>
+    </div>
+
+    <button class="primary" id="play">Start game</button>
+  </section>
+
+  <section id="game" class="screen hidden">
+    <div class="top">
+      <button class="ghost" id="back">Menu</button>
+      <span id="levelTag"></span>
+      <button class="ghost" id="sound">Sound: On</button>
+    </div>
+    <div class="scores">
+      <div class="score"><b id="sYou">0</b><small id="youLabel">You</small></div>
+      <div class="score"><b id="sDraw">0</b><small>Draws</small></div>
+      <div class="score"><b id="sAi">0</b><small id="aiLabel">AI</small></div>
+    </div>
+    <div id="status" aria-live="polite"></div>
+    <div id="board"></div>
+    <div class="row">
+      <button class="ghost" id="restart">Restart round</button>
+      <button class="ghost" id="resetScore">Reset score</button>
+    </div>
+  </section>
+
+  <div id="overlay" class="hidden">
+    <div class="modal">
+      <h2 id="mTitle"></h2>
+      <p id="mSub"></p>
+      <button class="primary" id="again">Play again</button>
+      <button class="ghost" id="toMenu">Back to menu</button>
+    </div>
+  </div>
+
+</main>
+<script src="script.js" onerror="document.body.insertAdjacentHTML('afterbegin','<p style=&quot;background:#fee;color:#900;padding:10px;margin:0&quot;>script.js file nahi mili. index.html, style.css aur script.js teeno ek hi folder me rakho.</p>')"></script>
+</body>
+</html>
